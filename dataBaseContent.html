@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data</title>
+</head>
+<body>
+    <div id="database-content">
+       <center> <h1 id="heading" style="color: rgb(117, 117, 237);">Click the button to fetch data </h1></center>
+        <center><button onclick="fetchData()" id="check-btn">CHECK</button></center>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script>
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyDJSDmqtxtj5NUwNReNiE88F5gOVutbarI",
+          authDomain: "fir-project-ce557.firebaseapp.com",
+          projectId: "fir-project-ce557",
+          storageBucket: "fir-project-ce557.appspot.com",
+          messagingSenderId: "470019680047",
+          appId: "1:470019680047:web:a4b34c52abaa1d41b423da",
+          measurementId: "G-71DNTW970K"
+        };
+      
+        // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+        //  firebase.analytics();
+        // const analytics = getAnalytics(app);
+        
+
+      </script>
+    <script src="index.js"></script>
+</body>
+</html>

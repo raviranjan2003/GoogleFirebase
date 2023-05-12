@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Auth Demo</title>
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        rel="stylesheet"
+        />
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+        />
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+        rel="stylesheet"
+        />
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+        ></script>
+        <link href="./index.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex justify-content-center p-5">
+        <div class="card">
+            <div class="card-header">
+                <center><h3>Login Form</h3></center>
+            </div>
+            <form class="card-body px-5 py-4" id="login">
+                <div id="parent-input-content">
+                    <div id="input-content">
+                    <center><small><span id="error" style="color: red;"></span></small></center>
+                        <label class="custom-field">
+                            <input id="name" type="text" class="input" required  />
+                            <span class="placeholder">Name</span>
+                        </label><br />
+                        <label class="custom-field">
+                            <input id="email" type="email" class="input" required />
+                            <span class="placeholder">Email Id</span>
+                        </label><br />
+                        <label class="custom-field">
+                            <input id="password" type="password" class="input" required />
+                            <span class="placeholder">Password</span>
+                        </label><br /><br/>
+                        <a href="#" onclick="resetPassword()">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <center><button type="submit" onclick="login()" class="btn btn-primary" id="login-btn">Login</button></center>
+                    <center> <button onclick="signup()" class="btn btn-secondary" id="signup-btn">Sign Up</button></center>
+                    <center> <button style="display: none;" onclick="logout()" class="btn btn-secondary" id="logout-btn">Log Out</button></center>
+                </div>
+            </form>
+            <center><a href="dataBaseContent.html">Want to see data from database ?</a></center>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script>
+    
+            const firebaseConfig = {
+              apiKey: "AIzaSyDJSDmqtxtj5NUwNReNiE88F5gOVutbarI",
+              authDomain: "fir-project-ce557.firebaseapp.com",
+              projectId: "fir-project-ce557",
+              storageBucket: "fir-project-ce557.appspot.com",
+              messagingSenderId: "470019680047",
+              appId: "1:470019680047:web:a4b34c52abaa1d41b423da",
+              measurementId: "G-71DNTW970K"
+            };
+          
+            // Initialize Firebase
+             firebase.initializeApp(firebaseConfig);
+            //  firebase.analytics();
+            // const analytics = getAnalytics(app);
+            
+
+          </script>
+        <script src="index.js"></script>
+
+
+    </body>
+</html>
